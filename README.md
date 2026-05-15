@@ -1,65 +1,97 @@
-# 🏠 Casa - Household Task Management
+# 🏠 Casa: Advanced Household Gamification System
 
-**Casa** is a modern, gamified web application designed to streamline household chores and family collaboration. By turning daily tasks into a rewarding experience, it helps families stay organized and motivated.
+**Casa** is a high-fidelity, gamified task management platform engineered to optimize household productivity through interactive mechanics and real-time data synchronization. It transforms mundane domestic chores into a collaborative, competitive, and rewarding experience for family environments.
 
 ---
 
-## ✨ Key Features
+## 🌟 Strategic Features
 
--   **🎯 Task Gamification**: Earn points based on task difficulty and speed.
--   **🎡 Task Roulette**: Randomly assign tasks to family members for a fun, fair distribution of work.
--   **📊 Real-time Dashboard**: Track progress, see the family leaderboard, and analyze performance with interactive charts.
--   **🌓 Dark/Light Mode**: Premium design with full support for both light and dark themes.
--   **💾 Persistence**: Seamless synchronization across devices using Firebase Firestore.
--   **🕒 Smart Points**: Points are dynamically calculated. Finish tasks early for a bonus, or take too long and see a small penalty!
+### 🎮 Dynamic Gamification Engine
+- **Algorithmic Scoring**: Points are calculated based on task complexity (Difficulty Rating) and completion efficiency.
+- **Efficiency Bonuses**: Strategic 1.5x multipliers for tasks completed within the estimated timeframe.
+- **Time-Based Decay**: Adaptive point reduction for overdue tasks to encourage consistent productivity.
 
-## 🛠️ Tech Stack
+### 🎡 Automated Distribution (Roulette)
+- **Fair Allocation Algorithm**: A randomized assignment system that ensures equitable distribution of domestic responsibilities among active members.
+- **Batch Processing**: Simultaneous multi-task assignment with instant database persistence.
 
--   **Frontend**: React (Hooks, Context)
--   **Build Tool**: Vite
--   **Styling**: Vanilla CSS with HSL variables and Glassmorphism.
--   **Icons**: Lucide React
--   **Charts**: Recharts
--   **Backend**: Firebase Firestore (Real-time updates)
+### 📊 Performance Analytics
+- **Live Leaderboard**: Real-time visualization of family performance and point standings.
+- **Interactive Data Visualization**: Integrated charting systems (Recharts) for historical performance analysis.
+- **Detailed Breakdowns**: Granular insight into individual contributions and task completion history.
 
-## 🚀 Getting Started
+### 🎨 Premium User Experience
+- **Responsive Architecture**: Seamless operation across desktop, tablet, and mobile devices.
+- **Adaptive Aesthetics**: Full-spectrum Dark and Light mode support with a modern Glassmorphism UI.
+- **Micro-interactions**: Fluid animations and feedback mechanisms (Confetti, Transitions) to enhance user engagement.
+
+---
+
+## 🛠 Technical Architecture
+
+| Layer | Technology | Implementation |
+| :--- | :--- | :--- |
+| **Frontend** | React 19 | Component-driven architecture with Functional Hooks. |
+| **State Management** | Custom Hooks | Optimized data fetching and state synchronization. |
+| **Database** | Firebase Firestore | Real-time NoSQL persistence for multi-device sync. |
+| **Styling** | Vanilla CSS | Custom design system using HSL color tokens and CSS Variables. |
+| **Visualization** | Recharts | SVG-based responsive data representation. |
+| **Icons** | Lucide React | Consistent, scalable vector iconography. |
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── assets/             # Static visual resources
+├── components/         # Atomic and Molecular UI components
+│   ├── Dashboard/      # Analytics and Leaderboard
+│   ├── Roulette/       # Task distribution engine
+│   └── TaskCard/       # Individual task representation
+├── hooks/              # Business logic and Firebase integration
+├── firebase.js         # Backend infrastructure configuration
+└── App.jsx             # Application core orchestrator
+```
+
+---
+
+## 🚀 Deployment & Installation
 
 ### Prerequisites
--   Node.js (v18+)
--   A Firebase project
+- **Node.js**: Environment version 18.0.0 or higher.
+- **Firebase**: A configured Firestore project instance.
 
-### Installation
+### Setup Instructions
 
-1.  **Clone the repository**:
-    ```bash
-    git clone https://github.com/MoraGamer20/casa.git
-    cd casa
-    ```
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/MoraGamer20/casa.git
+   cd casa
+   ```
 
-2.  **Install dependencies**:
-    ```bash
-    npm install
-    ```
+2. **Dependency Installation**
+   ```bash
+   npm install
+   ```
 
-3.  **Firebase Configuration**:
-    Create a `.env` file or update `src/firebase.js` with your project's credentials.
+3. **Environment Configuration**
+   Ensure `src/firebase.js` reflects your unique project credentials to establish a secure backend connection.
 
-4.  **Run locally**:
-    ```bash
-    npm run dev
-    ```
-
-## 📈 Point System Logic
-
-The system rewards efficiency:
--   **Base Points**: Each task has a difficulty rating (points).
--   **Bonus**: If completed within the estimated time, you earn **1.5x points**.
--   **Penalty**: If completed late, points are reduced for every extra hour elapsed.
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to open an issue or submit a pull request.
+4. **Development Execution**
+   ```bash
+   npm run dev
+   ```
 
 ---
 
-*Made with ❤️ by **Kevin Alejandro Morado Ortega (MoraGamer20)** for more organized homes.*
+## 📄 License & Attribution
+
+This project is designed for private domestic use and educational demonstration.
+
+**Author:** [Kevin Alejandro Morado Ortega](https://github.com/MoraGamer20)
+**Project Title:** Casa - Household Management v1.0.0
+
+---
+
+*Transforming household dynamics through technology and engagement.*

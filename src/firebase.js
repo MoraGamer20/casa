@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDOjkrHNjIpV-f3wDSsd8cR3dM__sq1AnY",
-  authDomain: "casa-f3ad7.firebaseapp.com",
-  projectId: "casa-f3ad7",
-  storageBucket: "casa-f3ad7.firebasestorage.app",
-  messagingSenderId: "218029087390",
-  appId: "1:218029087390:web:60e24c2bc3795f5a48798f"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 // Initialize Firebase
