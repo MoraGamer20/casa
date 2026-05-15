@@ -1,0 +1,126 @@
+.quick-add-bar-container {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 1.25rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+[data-theme='dark'] .quick-add-bar-container {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.quick-add-inputs {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.select-wrapper {
+  flex: 2;
+  min-width: 250px;
+}
+
+.time-pts-inputs {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.input-mini {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.input-mini span {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.input-mini input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-main);
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Footer & Assignees */
+.quick-add-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.assignees-selector {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.assignee-btn-full {
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+  background: #f1f5f9;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+[data-theme='dark'] .assignee-btn-full {
+  background: #334155;
+  color: #e2e8f0;
+}
+
+.assignee-btn-full.active {
+  background: var(--person-color);
+  color: white;
+  border-color: rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-save-task {
+  padding: 10px 24px;
+  border-radius: 12px;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
+}
+
+.btn-save-task:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-save-task:not(:disabled):hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}

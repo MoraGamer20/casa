@@ -1,0 +1,128 @@
+.family-notes {
+  margin-bottom: 2.5rem;
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-premium);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border: 1px solid var(--border-color);
+  background: var(--white);
+}
+
+[data-theme='dark'] .note-item {
+  background: rgba(253, 246, 227, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+}
+
+[data-theme='dark'] .note-item:nth-child(even) {
+  background: rgba(227, 242, 253, 0.1) !important;
+}
+
+[data-theme='dark'] .note-text {
+  color: white !important;
+}
+
+
+.notes-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--primary);
+}
+
+.notes-header h3 {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.notes-list {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.5rem;
+  scrollbar-width: none;
+}
+
+.notes-list::-webkit-scrollbar {
+  display: none;
+}
+
+.empty-notes {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+.note-item {
+  background: #fdf6e3; /* Classic post-it color */
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transform: rotate(-1deg);
+  transition: transform 0.2s;
+  border: 1px solid #eee8d5;
+}
+
+.note-item:nth-child(even) {
+  transform: rotate(1deg);
+  background: #e3f2fd;
+  border-color: #bbdefb;
+}
+
+.note-item:hover {
+  transform: scale(1.05) rotate(0deg);
+  z-index: 10;
+}
+
+.note-text {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-main);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.note-delete {
+  align-self: flex-end;
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.note-item:hover .note-delete {
+  opacity: 1;
+}
+
+.notes-input-area {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.notes-input-area input {
+  flex-grow: 1;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-color);
+  background: #f8fafc;
+  font-size: 0.9375rem;
+}
+
+.btn-send {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
